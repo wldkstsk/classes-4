@@ -1,6 +1,5 @@
 <html>
 <head>
-<<<<<<< HEAD
 <style>
 /* From StackOverflow -
 https://stackoverflow.com/questions/5793214/creating-programming-code-box-on-my-website-w-xhtml-css */
@@ -18,8 +17,6 @@ https://stackoverflow.com/questions/5793214/creating-programming-code-box-on-my-
         /* You could also put all sorts of styling here, like different font, color, underline, etc. for the code. */
     }
 </style>
-=======
->>>>>>> git_checkout_command
 <body>
 <div id="container">
   <h1>Git Manual</h1>
