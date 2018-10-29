@@ -1,22 +1,5 @@
 <html>
 <head>
-<style>
-/* From StackOverflow -
-https://stackoverflow.com/questions/5793214/creating-programming-code-box-on-my-website-w-xhtml-css */
-.codebox {
-        /* Below are styles for the codebox (not the code itself) */
-        border:1px solid black;
-        background-color:#EEEEFF;
-        width:300px;
-        overflow:auto;
-        padding:10px;
-    }
-    .codebox code {
-        /* Styles in here affect the text of the codebox */
-        font-size:0.9em;
-        /* You could also put all sorts of styling here, like different font, color, underline, etc. for the code. */
-    }
-</style>
 <body>
 <div id="container">
   <h1>Git Manual</h1>
