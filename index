@@ -1,23 +1,58 @@
 <html>
+<head>
+<style>
+/* From StackOverflow -
+https://stackoverflow.com/questions/5793214/creating-programming-code-box-on-my-website-w-xhtml-css */
+.codebox {
+        /* Below are styles for the codebox (not the code itself) */
+        border:1px solid black;
+        background-color:#EEEEFF;
+        width:300px;
+        overflow:auto;
+        padding:9px;
+    }
+    .codebox code {
+        /* Styles in here affect the text of the codebox */
+        font-size:0.9em;
+        /* You could also put all sorts of styling here, like different font, color, underline, etc. for the code. */
+    }
+</style>
 <body>
-  <b>1. git config --global user.name "" </b> - Setting your Git username for every repository on your computer
-  <br>
-  <b>Example: </b> git config --global user.name "Mona Lisa"
-  <br><br>
-  <b>2. git reset HEAD </b> git-reset - Reset current HEAD to the specified state
-  <br>
-  -HEAD is the pointer to the current branch reference, which is in turn a pointer to the last commit made on that branch.
-  <br><br>
-  <b>3. gitk -all </b> gitk - The Git repository browser. Displays changes in a repository or a selected set of commits. This includes visualizing the commit graph, showing information related to each commit, and the files in the trees of each revision.
-  <br>
-  --all - Show all refs (branches, tags, etc.).
-  <br><br>
-  <b>4. git branch --merged </b> - See which branches are already merged into the branch you re on.
-  <br><br>
-  <b>5. git branch "branch" "commit hash"</b> - instantly commit hash of the chosen "branch"
-  <br><br>
-  <b>6. git pull "remote" "branch" </b> - Fetch the specified remotes copy of the chosen "branch" and immediately merge it into the local copy.
- The "remote" repository is the source of a fetch or pull operation.
-  <br><br>
-  </body>
+<div id="container">
+  <h1>Git Manual</h1>
+  <div id="commands">
+    <ul>
+      <li><strong>git checkout -b</strong></li><br />
+      This command creates a new branch in our local Git repository and then switches to it. It is really
+      helpful in dividing our work - in most cases, we use model 'branch-per-feature', which means that
+      we create a new branch for every feature we're currently working at. For example,
+      when we are about to work on login system, before start we should type in console: <br />
+      <div class="codebox">
+        <code>
+          $ git checkout -b login-system
+        </code>
+      </div> <br />
+      And then, we are good to go, as every change that we'll make from that point before merging or checking out
+      to another branch will be saved only in branch 'login-system'. <br />
+      The benefits of branching include ease of reverting the changes if something goes wrong
+      and provision of isolated environment for every change to the codebase (this ensures that
+      the master branch always contains production-quality code). <br />
+      Note that <br />
+      <div class="codebox">
+      <code>
+        $ git checkout -b login-system
+      </code>
+      </div> <br />
+      and <br />
+      <div class="codebox">
+        <code>
+          $ git branch login-system
+          $ git checkout login-system
+        </code>
+      </div> <br />
+      are doing exactly the same thing (but the second one in two steps).
+    </ul>
+  </div>
+</div>
+</body>
 </html>
