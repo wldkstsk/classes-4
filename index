@@ -52,6 +52,27 @@ https://stackoverflow.com/questions/5793214/creating-programming-code-box-on-my-
       </div> <br />
       are doing exactly the same thing (but the second one in two steps).
     </ul>
+    <ul>
+      <li><strong>git branch --merged</strong></li><br />
+      List, create, or delete branches. With --merged, only branches
+      merged into the named commit (i.e. the branches whose tip commits are 
+      reachable from the named commit) will be listed.
+      Only list branches whose tips are reachable from the specified
+      commit (HEAD if not specified). Implies --list, incompatible with
+      --no-merged. <br />
+      <div class="codebox">
+        <code>
+          $ git branch --merged
+        </code>
+      </div> <br />
+      Example:  <br />
+      <div class="codebox">
+      <code>
+        $ git branch --merged
+		* master
+      </code>
+      </div> <br />
+    </ul>
   </div>
 </div>
 </body>
