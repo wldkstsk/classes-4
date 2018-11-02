@@ -1,79 +1,30 @@
-<html>
-<head>
-<style>
-/* From StackOverflow -
-https://stackoverflow.com/questions/5793214/creating-programming-code-box-on-my-website-w-xhtml-css */
-.codebox {
-        /* Below are styles for the codebox (not the code itself) */
-        border:1px solid black;
-        background-color:#EEEEFF;
-        width:300px;
-        overflow:auto;
-        padding:9px;
-    }
-    .codebox code {
-        /* Styles in here affect the text of the codebox */
-        font-size:0.9em;
-        /* You could also put all sorts of styling here, like different font, color, underline, etc. for the code. */
-    }
-</style>
-<body>
-<div id="container">
-  <h1>Git Manual</h1>
-  <div id="commands">
-    <ul>
-      <li><strong>git checkout -b</strong></li><br />
-      This command creates a new branch in our local Git repository and then switches to it. It is really
-      helpful in dividing our work - in most cases, we use model 'branch-per-feature', which means that
-      we create a new branch for every feature we're currently working at. For example,
-      when we are about to work on login system, before start we should type in console: <br />
-      <div class="codebox">
-        <code>
-          $ git checkout -b login-system
-        </code>
-      </div> <br />
-      And then, we are good to go, as every change that we'll make from that point before merging or checking out
-      to another branch will be saved only in branch 'login-system'. <br />
-      The benefits of branching include ease of reverting the changes if something goes wrong
-      and provision of isolated environment for every change to the codebase (this ensures that
-      the master branch always contains production-quality code). <br />
-      Note that <br />
-      <div class="codebox">
-      <code>
-        $ git checkout -b login-system
-      </code>
-      </div> <br />
-      and <br />
-      <div class="codebox">
-        <code>
-          $ git branch login-system
-          $ git checkout login-system
-        </code>
-      </div> <br />
-      are doing exactly the same thing (but the second one in two steps).
-    </ul>
-    <ul>
-      <li><strong>git branch --merged</strong></li><br />
-      List, create, or delete branches. With --merged, only branches
-      merged into the named commit (i.e. the branches whose tip commits are 
-      reachable from the named commit) will be listed.
-      Only list branches whose tips are reachable from the specified
-      commit (HEAD if not specified). Implies --list, incompatible with
-      --no-merged. <br />
-      <div class="codebox">
-        <code>
-          $ git branch --merged
-        </code>
-      </div> <br />
-      Example:  <br />
-      <div class="codebox">
-      <code>
-        $ git branch --merged
-		* master
-      </code>
-      </div> <br />
-    </ul>
-  </div>
-</div>
-</body>
-</html>
+<!doctype html> – 
+<meta charset="UTF-8" /> 
+<header> </header> 
+<nav> </nav> 
+<article><big> Command's description</big></article> 
+<section> 
+
+<p>1.<strong> git config --global user.email "" </strong>
+The command serves  to set  email address after install github. This is important because every Git commit uses this information, and it’s immutably baked into the commits you start creating.
+Example:<strong>$ git config --global user.email osatskyi@example.com</strong></p>
+<p>2.<strong>git diff --staged</strong>
+The command  will only show changes to files in the "staged" area, view difference between HEAD and Stage.</p>
+<p>3.<strong>git checkout -b "branch"</strong>
+The command creates a new branch in local repository and switches to it.
+<p>4.<strong>git log --graph --all</strong> </br>
+<strong>--graph</strong>
+Draw a text-based graphical representation of the commit history on the left hand side of the output.
+This may cause extra lines to be printed in between commits, in order for the graph history to bedrawn properly.
+This enables parent rewriting.</br>
+<strong>--all</strong> 
+Shows all the branches instead of just current one.
+(Pretend as if all the refs in refs/ are listed on the command line as <commit>)</p>
+  <p>5.<strong>git branch -d "branch"</strong>
+The command deletes a branch. The branch must be fully merged in its upstream branch, or in HEAD if no upstream
+was set with --track or --set-upstream.</p>
+<p>6.<strong>git fetch "remote" "branch"</strong>
+The command downloads objects and refs from another repository.</p>
+</section> 
+<aside> </aside> 
+<footer> </footer> 
